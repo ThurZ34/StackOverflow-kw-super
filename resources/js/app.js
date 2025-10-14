@@ -7,6 +7,7 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import { ZiggyVue } from 'ziggy-js';
 
 createInertiaApp({
+  title: title => `${title} - KaweSuper`,
   resolve: name => {
     const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
     return pages[`./Pages/${name}.vue`]
