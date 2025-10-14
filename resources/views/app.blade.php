@@ -10,18 +10,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+    @inertiaHead
 </head>
-<body class="antialiased">
-    <div class="container mt-5">
-        <h1>Hello, Bootstrap!</h1>
-        <p>Bootstrap 5 berhasil diinstall di Laravel 12.</p>
-
-        <div class="alert alert-success" role="alert">
-          Ini adalah contoh alert dari Bootstrap.
-        </div>
-
-        <button type="button" class="btn btn-primary">Tombol Primary</button>
-        <button type="button" class="btn btn-secondary">Tombol Secondary</button>
-    </div>
+<body>
+    @inertia
 </body>
 </html>
