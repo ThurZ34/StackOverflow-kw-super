@@ -120,7 +120,7 @@ const removeQuestion = (payload) => {
     if (confirm("Are you sure?")) {
         router.delete(route('questions.destroy', payload.id), {
             preserveScroll: true
-        })
+         })
     }
 }
 </script>
