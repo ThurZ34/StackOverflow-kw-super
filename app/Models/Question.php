@@ -55,7 +55,9 @@ class Question extends Model
 
     public function tagged(array $tags)
     {
-        $tags = Tag::whereIn('name', $tags)->pluck('id')->all();
+        $tags = collect($tags)->map(function ($tag) {
+            return Tag::firstOrCreate(['name' => $tag])->id;
+        })->all();
 
         $this->tags()->sync($tags);
     }

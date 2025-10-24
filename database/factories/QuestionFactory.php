@@ -17,7 +17,7 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $title = rtrim(fake()->realText(50), '.'),
+            'title' => $title = rtrim(fake()->unique()->realText(50), '.'),
             'slug' => str($title)->slug(),
             'body' => fake()->realText(500),
             'views_count' => fake()->randomNumber(2),
